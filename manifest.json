@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Gerador de Pix Local",
+  "version": "1.5",
+  "description": "Gera um QR Code Pix oficial a partir de um texto selecionado.",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["qrcode_min.js", "content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
